@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6 ielt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7 ielt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+  {% load static %}
+<meta charset="utf-8">
+
+<link rel="stylesheet" type="text/css" href="/static/new.css" />
+</head>
+{% include 'home/navigation.html' %}
+<body >
+<div class="container">
+  <section id="content">
+    <form action="/admin_login/" method="POST">
+      {% csrf_token %}
+      <h1>Admin Login</h1>
+      {% if messages %}                 
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {% for message in messages %}
+        {{ message }}
+        {% endfor %}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+{% endif %}
+      <div>
+        <input type="text"  name="username" placeholder="Username"  id="username" required />
+      </div>
+      <div>
+        <input type="password"  name="password" placeholder="Password" required="" id="password" required />
+      </div>
+      <div>
+        <input type="submit"   value="Log in" />
+
+      </div>
+    </form>
+
+  </section>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<html>
+<head>
+    <title></title></head>
+{% include 'home/navigation.html' %}
+    <body>
+    <div class="box-outer">
+    <form method="POST" action="/registration/">
+        {% csrf_token %}
+
+         <h2 class="heading"> Patient Register</h2>
+         {% if messages %}                 
+         <div class="alert alert-danger alert-dismissible fade show" role="alert">
+           {% for message in messages %}
+           {{ message }}
+           {% endfor %}
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>
+{% endif %}
+        <label for="firstname">Enter Firstname</label>
+        <input type="text" name="first_name" class="input-control" id="firstname"><br>
+        <label for="lastname">Enter lastname</label>
+        <input type="text" name="last_name" class="input-control" id="lastname"><br>
+        <label for="mobileno">Enter mobileno</label>
+        <input type="text" name="mobileno" class="input-control" id="mobileno"><br>
+         <label for="address">Address</label>
+        <textarea id="address" class="input-control" name="address">
+             </textarea>
+        <label for="username">Enter username</label>
+        <input type="text" name="username" class="input-control" id="username"><br>
+        <label for="bloodgroup">Enter bloodgroup</label>
+        <select name="bloodgroup" id="bloodgroup" class="input-control">
+        <option value="A+">A+</option>
+            <option value="B+">B+</option>
+        <option value="A-">A-</option>
+        <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+        </select><br>
+        <label for="password">Enter password</label>
+        <input type="password" name="password" class="input-control" id="password"><br>
+        <input type="submit" name="submit" class="button" value="Register">
+
+    </form>
+    </div>
+<style>
+  .box-outer {
+    border: 1px solid #ccc;
+    background-color: #FFFFFF;
+    padding: 1rem;
+    margin:200px;
+    margin-bottom:10px;
+    margin-top:30px;
+    border-radius: .12rem;
+}
+/* Heading styles */
+.heading {
+    margin-bottom: 1rem;
+}
+/* Input control styles */
+.input-control {
+    transition: border .1s linear 0s, box-shadow .1s, width .25s, color .2s;
+    border: 1px solid #ced4da;
+    box-shadow: 0 1px 3px rgb(50 50 93 / 10%), 0 1px 0 rgb(0 0 0 / 2%);
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: .969rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #212529;
+    background-color: #FFF;
+    background-clip: padding-box;
+    appearance: none;
+    border-radius: .12rem;
+    margin-bottom: 1rem;
+}
+.input-control:focus {
+    border-color: #9fd4fc;
+    box-shadow: 0 0 0 4px rgb(0 149 255 / 15%);
+    background-color: #fffffa;
+    outline: 0;
+
+}
+/* Button styles */
+.button {
+    color: #FFFFFF;
+    box-shadow: 0 1px 3px rgb(50 50 93 / 10%), 0 1px 0 rgb(0 0 0 / 2%);
+    background:dodgerblue;
+    border: 0;
+    padding: .5rem;
+    border-radius:5px;
+}
+.button:focus {
+    background: linear-gradient(#5EA534, #519327);
+}
+  .button:hover{
+  color:white;
+  background:darkblue;
+  }
+  </style>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+{% extends 'Patient/patientbase.html' %}
+{% block content %}
+{% load static %}
+
+    <body>
+     <section class="book_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <form action="/psendrequest/" method="POST">
+            {% csrf_token %}
+            <h4>
+              BLOOD <span>REQUEST</span>
+            </h4>
+            <div class="form-row ">
+              <div class="form-group col-lg-4">
+                <label for="inputPatientName">Patient Name </label>
+                <input type="text" class="form-control" id="inputPatientName" placeholder="" name="firstname">
+              </div>
+              <div class="form-group col-lg-4">
+                <label for="inputPatientName">Patient Name </label>
+                <input type="text" class="form-control" id="inputPatientName1" placeholder="" name="lastname">
+              </div>
+               <div class="form-group col-lg-4">
+                <label for="inputPhone">Phone Number</label>
+                <input type="number" class="form-control" id="inputPhone" placeholder="XXXXXXXXXX" name="mobileno">
+              </div>
+            </div>
+
+            <div class="form-row ">
+                <div class="form-group col-lg-4">
+               <label for="w3review">Address:</label>
+
+            <textarea id="w3review" name="address" class="form-control wide" rows="4" cols="50">
+
+            </textarea>
+              </div>
+             <div class="form-group col-lg-4">
+                <label for="bloodgroup">Select bloodgroup</label>
+                <select class="form-control wide" id="bloodgroup" name="bloodgroup">
+                  <option value="select">Select </option>
+                  <option value="A+ ">A+ </option>
+                  <option value="B+">B+</option>
+                  <option value="A- ">A- </option>
+                  <option value="B- ">B- </option>
+                  <option value="AB+ ">AB+ </option>
+                  <option value="AB- ">AB- </option>
+                  <option value="O+ ">O+ </option>
+                  <option value="O- ">O- </option>
+
+                </select>
+              </div>
+              <div class="form-group col-lg-4">
+
+               <label for="unit">Enter Blood unit in ml </label>
+                <input type="number" class="form-control" id="" placeholder="" name="unit">
+                </div>
+              </div>
+               <div class="btn-box">
+              <button type="submit" class="btn   ">Submit Now</button>
+            </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  </body>
+</html>
+{% endblock content %}

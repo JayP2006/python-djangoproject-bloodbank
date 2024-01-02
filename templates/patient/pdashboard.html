@@ -1,0 +1,90 @@
+{% extends 'Patient/patientbase.html' %}
+{% block content %}
+<head>
+    <style>
+            .xyz{
+        color: blue;
+        font-size: 3ex;
+    }
+    </style>
+</head>
+<br><br>
+<div class="container">
+  {% csrf_token %}
+  {% if messages %}                 
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              {% for message in messages %}
+              {{ message }}
+              {% endfor %}
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+  {% endif %}
+    <div class="row" >
+      <div class="col-sm-3">
+        <div class="card bg-light">
+          <div class="card-body">
+              <div class="blood">
+                <i class="fa-regular fa-hand xyz"></i>
+              </div><br>
+              <div>
+                Request Made <br>
+                  {{requestmade}}
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="card bg-light">
+            <div class="card-body">
+                <div class="blood">
+                  <i class="fa-solid fa-clock-rotate-left xyz"  style="color:orange"></i>
+                </div><br>
+                <div>
+                    Pending Request <br>
+                    {{requestpending}}
+                </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="col-sm-3">
+          <div class="card bg-light">
+              <div class="card-body">
+                  <div class="blood">
+                    <i class="fas fa-check-circle xyz" style="color:green"></i>
+                  </div><br>
+                  <div>
+                       Approved Request<br>
+                      {{requestapproved}}
+                  </div>
+              </div>
+            </div>
+      </div>
+      <div class="col-sm-3">
+          <div class="card bg-light">
+              <div class="card-body">
+                  <div class="blood">
+                    <i class="fas fa-times-circle xyz" style="color:red"></i>
+                  </div><br>
+                  <div>
+                       Rejected Request <br>
+                      {{requestrejected}}
+                  </div>
+              </div>
+            </div>
+        </div>
+
+      </div>
+
+
+
+
+<!--
+developed By : sumit kumar
+facebook : fb.com/sumit.luv
+youtube : youtube.com/lazycoders
+-->
+{% endblock content %}
