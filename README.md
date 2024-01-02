@@ -1,5 +1,5 @@
 # E-BloodBank
-![developer](https://img.shields.io/badge/Developed%20By%20%PATEL JAY%20KUMAR-Blue)
+DEVELOPED BY JAYKUMAR PATEL
 
 ## Functions
 
