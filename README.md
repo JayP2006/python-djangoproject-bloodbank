@@ -47,9 +47,7 @@ py manage.py createsuperuser
 - Download This Project Zip Folder and Extract it
 - Move to project folder in Terminal. Then run following Commands :
 
-```python manage.py runserver
-
-- Now enter following URL in Your Browser Installed On Your Pc
+- python manage.py runserver
 ```
 http://127.0.0.1:8000/
 ```
