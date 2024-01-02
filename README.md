@@ -4,7 +4,7 @@ DEVELOPED BY JAYKUMAR PATEL
 ## Functions
 
 ### Admin
-- Create Admin account using following command
+
 ```
 py manage.py createsuperuser
 ```
