@@ -49,8 +49,12 @@ py manage.py createsuperuser
 ```
 - python manage.py runserver
 ```
+go to the webpage by this URL
 
+```
 http://127.0.0.1:8000/
+```
+
 ![homepage snap] 
 ### Admin Dashboard
 ![dashboard snap]
