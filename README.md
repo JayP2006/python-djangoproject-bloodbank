@@ -50,6 +50,14 @@ py manage.py createsuperuser
 - python manage.py runserver
 ```
 http://127.0.0.1:8000/
+![homepage snap] 
+### Admin Dashboard
+![dashboard snap]
+### Blood Donation 
+![invoice snap]
+### Blood Request
+![doctor snap]
+
 ```
 
 
