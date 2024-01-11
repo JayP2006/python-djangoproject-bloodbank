@@ -46,9 +46,10 @@ py manage.py createsuperuser
 - Install Python(3.7.6) (Dont Forget to Tick Add to Path while installing Python)
 - Download This Project Zip Folder and Extract it
 - Move to project folder in Terminal. Then run following Commands :
-
+```
 - python manage.py runserver
 ```
+
 http://127.0.0.1:8000/
 ![homepage snap] 
 ### Admin Dashboard
@@ -58,7 +59,7 @@ http://127.0.0.1:8000/
 ### Blood Request
 ![doctor snap]
 
-```
+
 
 
 ## Feedback
